@@ -1,10 +1,19 @@
 $(()=>{
     //This method is not sunc method ...
-    chrome.storage.sync.get("total", (budget)=>{
-        if(budget.total){
-            $("#total").text(parseInt(budget.total));
-        }
+    chrome.storage.sync.get(["total", "limit"], (budget)=>{
+        $("#total").text(parseInt(budget.total));
+        $("#limit").text(parseInt(budget.limit));
     });
+
+    // my own thought
+    // chrome.storage.sync.get("limit", (result)=>{
+    //     let limit = 0;
+    //     if(result.limit){
+    //         limit = result.limit;
+    //     }
+
+    //     $("#limit").text(limit);
+    // });
 
     $("#addCost").click(()=>{
         chrome.storage.sync.get("total", (budget)=>{
