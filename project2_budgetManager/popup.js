@@ -16,7 +16,7 @@ $(()=>{
     // });
 
     $("#addCost").click(()=>{
-        chrome.storage.sync.get("total", (budget)=>{
+        chrome.storage.sync.get(["total", "limit"], (budget)=>{
             let newTotal;
             if(budget.total){
                 newTotal = parseInt(budget.total);
@@ -30,13 +30,22 @@ $(()=>{
                 newTotal += parseInt(amount);
             }
 
-            chrome.storage.sync.set({
-                total: newTotal
-            });
-
-            $("#total").text(newTotal);
-            $("#amount").val("");
-
+            if(newTotal > budget.limit){
+                var notifOptions = {
+                    type: "basic",
+                    iconUrl: "broccoli.png",
+                    title: "limit reach",
+                    message: "You reach your limit"
+                }
+                chrome.notifications.create("limitNotif", notifOptions);
+            }else{
+                chrome.storage.sync.set({
+                    total: newTotal
+                });
+    
+                $("#total").text(newTotal);
+                $("#amount").val("");
+            }
         })
     })
 })
