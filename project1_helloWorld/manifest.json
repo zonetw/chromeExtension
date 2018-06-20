@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "HelloWorld",
+    "version": "1.0",
+    "description": "1st extention",
+    "icons":{
+        "128":"apple.png",
+        "64":"apple.png",
+        "16":"apple.png"
+    },
+    "browser_action":{
+        "default_icon": "apple.png",
+        "default_popup": "popup.html"
+    }
+}
