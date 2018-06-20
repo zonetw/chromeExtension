@@ -5,12 +5,13 @@
     "version": "1.0",
     "icons": {
         "128": "broccoli.png",
-        "48": "broccoli.png"
+        "48": "broccoli.png" 
     },
     "browser_action": {
         "default_icon": "broccoli.png",
         "default_popup": "popup.html"
     },
+    "options_page": "options.html",
     "permissions": [
         "storage"
     ]
