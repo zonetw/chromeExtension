@@ -1,0 +1,26 @@
+{
+  "name": "chromeExtension",
+  "version": "1.0.0",
+  "description": "chromeExtension # Acknowledgement The icons used in this project are designed by Freepik from Flaticon.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zonetw/chromeExtension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zonetw/chromeExtension/issues"
+  },
+  "homepage": "https://github.com/zonetw/chromeExtension#readme",
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "@types/chrome": "0.0.69"
+  }
+}
