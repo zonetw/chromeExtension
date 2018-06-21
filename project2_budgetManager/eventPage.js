@@ -48,3 +48,7 @@ chrome.storage.onChanged.addListener((changes, storageName)=>{
 
     chrome.browserAction.setBadgeText({text: changes.total.newValue.toString()});
 });
+
+chrome.storage.sync.get("total", (result)=>{
+    chrome.browserAction.setBadgeText({text: result.total.toString()});
+});
