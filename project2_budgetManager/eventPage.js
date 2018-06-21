@@ -41,3 +41,10 @@ chrome.contextMenus.onClicked.addListener((clickedData)=>{
     }
     
 });
+
+chrome.storage.onChanged.addListener((changes, storageName)=>{
+    // Items in the sync storage area are synced using Chrome Sync !!
+    console.log(storageName); //sync    
+
+    chrome.browserAction.setBadgeText({text: changes.total.newValue.toString()});
+});
