@@ -38,14 +38,14 @@ $(()=>{
                     message: "You reach your limit"
                 }
                 chrome.notifications.create("limitNotif", notifOptions);
-            }else{
-                chrome.storage.sync.set({
-                    total: newTotal
-                });
-    
-                $("#total").text(newTotal);
-                $("#amount").val("");
             }
+            
+            chrome.storage.sync.set({
+                total: newTotal
+            });
+
+            $("#total").text(newTotal);
+            $("#amount").val("");
         })
     })
 })
