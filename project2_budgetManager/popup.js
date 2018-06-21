@@ -1,8 +1,8 @@
 $(()=>{
     //This method is not sunc method ...
     chrome.storage.sync.get(["total", "limit"], (budget)=>{
-        $("#total").text(parseInt(budget.total));
-        $("#limit").text(parseInt(budget.limit));
+        $("#total").text(parseInt(budget.total) || 0 );
+        $("#limit").text(parseInt(budget.limit) || 0);
     });
 
     // my own thought
