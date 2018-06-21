@@ -12,8 +12,13 @@
         "default_popup": "popup.html"
     },
     "options_page": "options.html",
+    "background":{
+        "scripts": ["eventPage.js"],
+        "persistence": false
+    },
     "permissions": [
         "storage",
-        "notifications"
+        "notifications",
+        "contextMenus"
     ]
 }
