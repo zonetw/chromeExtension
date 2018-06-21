@@ -1,8 +1,9 @@
 var contextMenuSetting = {
     id: "spendMoney",
     title: "Spend Mpney",
-    // look up google develop page for more infomation
-    contexts: ["selection"]
+    // ContextType
+    // Enum "all", "page"(default), "frame", "selection", "link", "editable", "image", "video", "audio", "launcher", "browser_action", or "page_action"
+    contexts: ["selection", "page"]
 }
 
 chrome.contextMenus.create(contextMenuSetting);
