@@ -14,4 +14,11 @@
     "default_popup": "popup.html",
     "default_title": "ChangePageFontStyle"
   },
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs"
+  ]
 }
