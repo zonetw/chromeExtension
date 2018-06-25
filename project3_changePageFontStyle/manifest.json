@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "Change Page Font Style",
+  "version": "1.0.0",
+  "description": "",
+  "icons":{
+    "128": "donut.png",
+    "48": "donut.png",
+    "16": "donut.png"
+  },
+  // different from browser action
+  "page_action": {
+    "default_icon": "donut.png",
+    "default_popup": "popup.html",
+    "default_title": "ChangePageFontStyle"
+  },
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://developer.chrome.com/*"],
+      //Question: does the order of js matters ?
+      "js": ["jquery-3.3.1.js", "content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "https://developer.chrome.com/*"
+  ]
+}
