@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Speak it",
+  "version": "1.0.0",
+  "description": "",
+  "icons":{
+    "128": "milkshake.png",
+    "48": "milkshake.png",
+    "16": "milkshake.png"
+  },
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tts",
+    "contextMenus"
+  ]
+}
