@@ -1,4 +1,8 @@
 $(()=>{
+    chrome.storage.sync.get("limit", (result)=>{
+        $("#limit").val(result.limit);
+    });
+
     $("#saveLimit").click(()=>{
         let limit = parseInt($("#limit").val());
         if(limit){
